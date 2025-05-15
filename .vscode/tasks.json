@@ -1,0 +1,63 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++ build debug customized",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Werror",
+        "-Weffc++",
+        "-Wextra",
+        "-Wconversion",
+        "-Wsign-conversion",
+        "-fdiagnostics-color=always",
+        "-ggdb",
+        "-pedantic-errors",
+        "${file}",
+        "-o",
+        "${fileDirname}/build/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "compiler: /usr/bin/g++"
+    },
+    {
+      "type": "cppbuild",
+      "label": "C/C++: g++ build release customized",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Werror",
+        "-Weffc++",
+        "-Wextra",
+        "-Wconversion",
+        "-Wsign-conversion",
+        "-O2",
+        "-DNDEBUG",
+        "-pedantic-errors",
+        "${file}",
+        "-o",
+        "${fileDirname}/release/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "compiler: /usr/bin/g++"
+    }
+  ]
+}
