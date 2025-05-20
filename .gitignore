@@ -3,7 +3,7 @@
 # VSCode
 # .vscode/
 *.dSYM/
-build/
+debug/
 release/
 
 # Prerequisites
