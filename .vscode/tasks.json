@@ -7,7 +7,7 @@
       "command": "/bin/bash",
       "args": [
         "-c",
-        "mkdir -p \"${fileDirname}/build/debug\" && g++ -std=c++20 -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion -fdiagnostics-color=always -g -pedantic-errors \"${fileDirname}\"/*.cpp -o \"${fileDirname}\"/build/debug/${fileBasenameNoExtension}"
+        "mkdir -p \"${fileDirname}/build/debug\" && g++ -std=c++20 -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion -fdiagnostics-color=always -g -pedantic-errors -I\"${fileDirname}/../../../external/plog/include\" \"${fileDirname}\"/*.cpp -o \"${fileDirname}\"/build/debug/${fileBasenameNoExtension}"
       ],
       "options": {
         "cwd": "${fileDirname}"
@@ -25,7 +25,7 @@
       "command": "/bin/bash",
       "args": [
         "-c",
-        "mkdir -p \"${fileDirname}/build/release\" && g++ -std=c++20 -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion -O2 -DNDEBUG -pedantic-errors \"${fileDirname}\"/*.cpp -o \"${fileDirname}\"/build/release/${fileBasenameNoExtension}"
+        "mkdir -p \"${fileDirname}/build/release\" && g++ -std=c++20 -Wall -Werror -Weffc++ -Wextra -Wconversion -Wsign-conversion -O2 -DNDEBUG -pedantic-errors -I\"${fileDirname}/../../../external/plog/include\" \"${fileDirname}\"/*.cpp -o \"${fileDirname}\"/build/release/${fileBasenameNoExtension}"
       ],
       "options": {
         "cwd": "${fileDirname}"

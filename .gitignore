@@ -6,6 +6,7 @@
 *.dSYM/
 debug/
 release/
+external/
 
 # Prerequisites
 *.d
